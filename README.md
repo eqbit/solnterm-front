@@ -1,2 +1,3 @@
-# solnterm-front
+yarn install
 
+gulp build
