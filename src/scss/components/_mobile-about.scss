@@ -1,0 +1,44 @@
+@import "../mixins";
+
+.mobile-about {
+  margin-top: 40px;
+
+  @include mq(1200px, min) {
+    display: none;
+  }
+
+  &__title {
+    color: #999;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin: -5px;
+    padding-top: 10px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      border-top: 1px solid #E9E9E9;
+      position: absolute;
+      top: 0;
+      left: 5px;
+      width: calc(100% - 10px);
+      height: 0;
+    }
+
+    @include mq(719px) {
+      flex-direction: column;
+    }
+
+    a {
+      margin: 5px;
+
+      @include mq(720px, min) {
+        flex: 1;
+      }
+    }
+  }
+}

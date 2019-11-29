@@ -1,0 +1,89 @@
+.fixed-front-panel {
+  position: fixed;
+  width: 100%;
+  padding: 10px 0;
+  background: #414141;
+  bottom: 0;
+  left: 0;
+  z-index: 12;
+  transition: .3s;
+
+  &__buttons {
+    display: flex;
+
+    @include mq(719px) {
+      flex-direction: column;
+      padding: 35px 20px 15px;
+    }
+  }
+
+  @include mq(1200px, min) {
+    display: none;
+  }
+
+  &__toggle {
+    position: fixed;
+    z-index: 12;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(456px);
+    cursor: pointer;
+    transition: .3s;
+
+    @include mq(1200px, min) {
+      display: none;
+    }
+
+    @include mq(959px) {
+      transform: translateX(325px);
+    }
+
+    @include mq(719px) {
+      transform: none;
+      right: calc(50% - 6px);
+      bottom: 135px;
+
+      &--inner-page {
+        bottom: 80px;
+      }
+    }
+  }
+
+  &__text {
+    color: #BBBBBB;
+    font-size: 12px;
+    line-height: 18px;
+    margin-right: 40px;
+
+    @include mq(959px) {
+      display: none;
+    }
+  }
+
+  &__btn + &__btn {
+    margin-left: 20px;
+
+    @include mq(719px) {
+      margin: 10px 0 0;
+    }
+  }
+}
+
+.front-panel-hidden {
+  .fixed-front-panel {
+    transform: translateY(100%);
+  }
+
+  .fixed-front-panel__toggle {
+    transform: translateX(456px) rotateX(180deg);
+
+    @include mq(959px) {
+      transform: translateX(325px) rotateX(180deg);
+    }
+
+    @include mq(719px) {
+      transform: rotateX(180deg);
+      bottom: 10px;
+    }
+  }
+}

@@ -1,0 +1,152 @@
+.front-about {
+  @include mq(960px, min) {
+    display: flex;
+  }
+
+  &__promise {
+    flex: 1;
+    background: #FFB941;
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 56px;
+    color: #000;
+    padding: 50px;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    width: calc(50% - 10px);
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      background: #FFB941;
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s;
+      z-index: -1;
+    }
+
+    @include mq(1449px) {
+      font-size: 32px;
+      line-height: 46px;
+    }
+
+    @include mq(959px) {
+      width: 100%;
+      padding: 60px 0;
+      font-size: 28px;
+      line-height: 36px;
+
+      &:after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    @include mq(959px) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  &__double {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    width: calc(50% - 10px);
+
+    @include mq(959px) {
+      width: 100%;
+      margin: 50px 0 0;
+
+      @include mq(720px, min) {
+        flex-direction: row;
+      }
+    }
+  }
+
+  &-item {
+    height: 340px;
+    position: relative;
+    z-index: 1;
+    border-radius: 3px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq(959px) {
+      height: 250px;
+
+      @include mq(720px, min) {
+        width: calc(50% - 10px);
+      }
+    }
+
+    & + & {
+      margin-top: 10px;
+
+      @include mq(959px) {
+        @include mq(720px, min) {
+          margin-top: 0;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    &__img {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: #414141;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+      }
+    }
+
+    &:hover {
+      .front-about-item__img:after {
+        visibility: visible;
+        opacity: .7;
+      }
+    }
+
+    &__more {
+      font-size: 15px;
+      color: #FFF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      svg {
+        margin-top: 20px;
+      }
+    }
+  }
+}

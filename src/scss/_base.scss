@@ -1,0 +1,237 @@
+@import "./colors";
+@import "./mixins";
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  color: #333333;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 94px;
+
+  @include mq (719px) {
+    padding-top: 73px;
+  }
+}
+
+header, footer {
+  flex: none;
+}
+
+main {
+  flex: 1;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+
+  & + & {
+    margin-top: 1.5em;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+ol {
+  padding-left: 15px;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+#policy {
+  max-width: 700px;
+}
+
+.invisible {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.noscroll { 
+  overflow: hidden;
+}
+
+.container {
+  width: 1340px;
+  padding-right: 270px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq(1449px) {
+    width: 1130px;
+    padding-right: 228px;
+  }
+
+  &--full {
+    padding-right: 0;
+  }
+
+  @include mq(1199px) {
+    width: 902px;
+    padding: 0;
+  }
+
+  @include mq(959px) {
+    width: 650px;
+  }
+
+  @include mq(719px) {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.input-container {
+  position: relative;
+}
+
+.block-margin {
+  margin-top: 100px;
+  overflow: hidden;
+
+  @include mq(959px) {
+    margin-top: 60px;
+  }
+
+  @include mq(719px) {
+    margin-top: 40px;
+  }
+}
+
+.text-block-margin {
+  margin-top: 50px;
+
+  @include mq(959px) {
+    margin-top: 35px;
+  }
+
+  @include mq(719px) {
+    margin-top: 27px;
+  }
+}
+
+.sub-block-margin {
+  margin-top: 40px;
+
+  @include mq(719px) {
+    margin-top: 16px;
+  }
+}
+
+.little-margin  {
+  margin-top: 30px;
+
+  @include mq(719px) {
+    margin-top: 20px;
+  }
+}
+
+.block-title {
+  font-size: 42px;
+  line-height: normal;
+  font-weight: bold;
+
+  @include mq(719px) {
+    font-size: 24px;
+  }
+}
+
+.text-block {
+  line-height: 24px;
+
+  b {
+    font-size: 16px;
+  }
+
+  @include mq(719px) {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &-img {
+    margin: 50px 0 50px 40px;
+
+    @include mq(959px) {
+      margin: 40px 0 40px 25px;
+    }
+
+    @include mq(719px) {
+      margin: 20px 0;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 3px;
+    }
+
+    &__sign {
+      font-size: 14px;
+      line-height: 24px;
+      font-style: italic;
+    }
+  }
+}
+
+.compensate-for-scrollbar {
+  .header {
+    padding-right: 16px;
+  }
+
+  .sidebar {
+    right: calc(50% - 662px);
+  }
+}
+
+hr {
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid #CCCCCC;
+}

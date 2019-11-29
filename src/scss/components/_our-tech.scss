@@ -1,0 +1,129 @@
+.our-tech {
+  display: flex;
+  margin: -5px;
+
+  @include mq(959px) {
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    position: relative;
+    margin: 5px;
+    background: #f4f4f4;
+    color: #333333;
+
+    @include mq(959px) {
+      width: calc(50% - 10px);
+    }
+
+    @include mq(719px) {
+      width: 100%;
+    }
+
+    &__img {
+      height: 171px;
+      background: #2D2D2D;
+      border-radius: 3px 3px 0 0;
+      overflow: hidden;
+
+      @include mq(719px) {
+        height: 150px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__data {
+      padding: 30px 20px;
+
+      @include mq(959px) {
+        display: none;
+      }
+    }
+
+    &__title {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    &-links {
+      margin-top: 25px;
+
+      &__item {
+        display: block;
+        font-size: 12px;
+        line-height: 18px;
+        transition: .3s;
+
+        &:hover {
+          color: #e68a00;
+        }
+
+        & + & {
+          margin-top: .5em;
+        }
+      }
+    }
+
+    &__tooltip {
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 30px 20px;
+      background: #F4F4F4;
+      visibility: hidden;
+      opacity: 0;
+      transition: .3s;
+
+      @include mq(959px) {
+        visibility: visible;
+        opacity: 1;
+        position: static;
+      }
+    }
+
+    &__text {
+      font-size: 12px;
+      line-height: 19px;
+      margin-top: 15px;
+
+      @include mq(960px, min) {
+        min-height: 94px;
+      }
+    }
+
+    &__more {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      transition: .3s;
+
+      svg {
+        margin-top: 10px;
+
+        path, line {
+          transition: .3s;
+        }
+      }
+
+      &:hover {
+        color: #e68a00;
+
+        path, line {
+          stroke: #e68a00;
+        }
+      }
+    }
+
+    &:hover {
+      .our-tech-item__tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}

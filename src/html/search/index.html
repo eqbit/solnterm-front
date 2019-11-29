@@ -1,0 +1,200 @@
+@@include('../components/header.html')
+
+<div class="container">
+	<div class="search__top">
+		<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M14.561 17.5C19.2555 17.5 23.061 13.9183 23.061 9.5C23.061 5.08172 19.2555 1.5 14.561 1.5C9.86661 1.5 6.06104 5.08172 6.06104 9.5C6.06104 13.9183 9.86661 17.5 14.561 17.5Z" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+			<path d="M9.06104 15.5L1.06104 23.5" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+		</svg>
+		
+		<form data-header-search class="header-search__body search__form" action="/search">
+			<input type="text"
+			       required
+			       name="query"
+			       placeholder="Поиск"
+			       class="header-search__input"
+			       value="Вакуумная печь"
+			       data-header-search-input>
+			
+			<div class="header-search__clear" data-header-search-clear>
+				<svg id="закрыть" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+					<rect id="Rectangle_120" data-name="Rectangle 120" width="32" height="32" rx="16" fill="transparent"/>
+					<g id="Group_29" data-name="Group 29" transform="translate(10 10)">
+						<line id="Line_12" data-name="Line 12" x2="11" y2="11" fill="none" stroke="#fff" stroke-width="2"/>
+						<line id="Line_13" data-name="Line 13" x1="11" y2="11" fill="none" stroke="#fff" stroke-width="2"/>
+					</g>
+				</svg>
+			</div>
+			
+			<button class="header-search__submit" type="submit">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24.952" height="12.322" viewBox="0 0 24.952 12.322">
+					<g id="Group_1" data-name="Group 1" transform="translate(0 0.603)">
+						<path id="Path_6" data-name="Path 6" d="M55,15.558,59.2,10,55,4.442" transform="translate(-35.5 -4.442)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+						<line id="Line_5" data-name="Line 5" x2="24" transform="translate(0 5.558)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+					</g>
+				</svg>
+			</button>
+		</form>
+	</div>
+	
+	<h1 class="page-title">Результаты поиска</h1>
+	
+	<div class="search__total-results">Всего результатов: 34</div>
+	
+	<div class="search-filter">
+		<div class="search-filter__row">
+			<div class="button-checkbox">
+				<input type="checkbox" name="articles" id="articles">
+				<label for="articles" class="btn button-checkbox__btn">Статьи: 12</label>
+			</div>
+			
+			<div class="button-checkbox">
+				<input type="checkbox" name="equipment" id="equipment">
+				<label for="equipment" class="btn button-checkbox__btn">Оборудование: 3 </label>
+			</div>
+			
+			<div class="button-checkbox">
+				<input type="checkbox" name="tech" id="tech">
+				<label for="tech" class="btn button-checkbox__btn">Технологии: 19</label>
+			</div>
+		</div>
+		
+		<div class="search-filter__nav">
+			<div class="search-nav">
+				<div class="search-nav__arrow inactive">
+					<svg width="24" height="13" viewBox="0 0 24 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M5 11.625L1 5.625L5 0.625M24 5.625H0" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>
+					</svg>
+				</div>
+				
+				<div class="search-nav-pages">
+					<div class="search-nav-pages__item inactive">1</div>
+					<a href="?page=2" class="search-nav-pages__item">2</a>
+				</div>
+				
+				<a href="?page=2" class="search-nav__arrow">
+					<svg width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M19 11.625L23 5.625L19 0.625M0 5.625H24" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="search-results">
+		<a href="#" class="search-results-item">
+			<div class="search-results-item__img">
+				<img src="/images/search.jpg" srcset="/images/search.jpg 1x, /images/search@2x.jpg 2x" alt="">
+			</div>
+			
+			<div class="search-results-item__text">
+				<div class="search-results-item__type">Технологии</div>
+				<div class="search-results-item__title">Вакуумная закалка</div>
+				<div class="search-results-item__description">При изотермической закалке необходимо выдерживать сталь в закалочной среде столько
+					времени, чтобы успело закончиться изотермическое превращение аустенита...</div>
+			</div>
+		</a>
+		
+		<a href="#" class="search-results-item">
+			<div class="search-results-item__img">
+				<img src="/images/search.jpg" srcset="/images/search.jpg 1x, /images/search@2x.jpg 2x" alt="">
+			</div>
+			
+			<div class="search-results-item__text">
+				<div class="search-results-item__type">Технологии</div>
+				<div class="search-results-item__title">Вакуумная закалка</div>
+				<div class="search-results-item__description">При изотермической закалке необходимо выдерживать сталь в закалочной среде столько
+					времени, чтобы успело закончиться изотермическое превращение аустенита...</div>
+			</div>
+		</a>
+		
+		<a href="#" class="search-results-item">
+			<div class="search-results-item__img">
+				<img src="/images/search.jpg" srcset="/images/search.jpg 1x, /images/search@2x.jpg 2x" alt="">
+			</div>
+			
+			<div class="search-results-item__text">
+				<div class="search-results-item__type">Технологии</div>
+				<div class="search-results-item__title">Вакуумная закалка</div>
+				<div class="search-results-item__description">При изотермической закалке необходимо выдерживать сталь в закалочной среде столько
+					времени, чтобы успело закончиться изотермическое превращение аустенита...</div>
+			</div>
+		</a>
+		
+		<a href="#" class="search-results-item">
+			<div class="search-results-item__img">
+				<img src="/images/search.jpg" srcset="/images/search.jpg 1x, /images/search@2x.jpg 2x" alt="">
+			</div>
+			
+			<div class="search-results-item__text">
+				<div class="search-results-item__type">Технологии</div>
+				<div class="search-results-item__title">Вакуумная закалка</div>
+				<div class="search-results-item__description">При изотермической закалке необходимо выдерживать сталь в закалочной среде столько
+					времени, чтобы успело закончиться изотермическое превращение аустенита...</div>
+			</div>
+		</a>
+		
+		<a href="#" class="search-results-item">
+			<div class="search-results-item__img">
+				<img src="/images/search.jpg" srcset="/images/search.jpg 1x, /images/search@2x.jpg 2x" alt="">
+			</div>
+			
+			<div class="search-results-item__text">
+				<div class="search-results-item__type">Технологии</div>
+				<div class="search-results-item__title">Вакуумная закалка</div>
+				<div class="search-results-item__description">При изотермической закалке необходимо выдерживать сталь в закалочной среде столько
+					времени, чтобы успело закончиться изотермическое превращение аустенита...</div>
+			</div>
+		</a>
+		
+		<a href="#" class="search-results-item">
+			<div class="search-results-item__img">
+				<img src="/images/search.jpg" srcset="/images/search.jpg 1x, /images/search@2x.jpg 2x" alt="">
+			</div>
+			
+			<div class="search-results-item__text">
+				<div class="search-results-item__type">Технологии</div>
+				<div class="search-results-item__title">Вакуумная закалка</div>
+				<div class="search-results-item__description">При изотермической закалке необходимо выдерживать сталь в закалочной среде столько
+					времени, чтобы успело закончиться изотермическое превращение аустенита...</div>
+			</div>
+		</a>
+	</div>
+	
+	<div class="text-block-margin"></div>
+	
+	<div class="search__bottom-nav">
+		<div class="search-nav">
+			<div class="search-nav__button inactive">Предыдущая</div>
+			
+			<div class="search-nav__arrow inactive">
+				<svg width="24" height="13" viewBox="0 0 24 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M5 11.625L1 5.625L5 0.625M24 5.625H0" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>
+				</svg>
+			</div>
+			
+			<div class="search-nav-pages">
+				<div class="search-nav-pages__item inactive">1</div>
+				<a href="?page=2" class="search-nav-pages__item">2</a>
+			</div>
+			
+			<a href="?page=2" class="search-nav__arrow">
+				<svg width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M19 11.625L23 5.625L19 0.625M0 5.625H24" stroke="#333333" stroke-width="2" stroke-miterlimit="10"/>
+				</svg>
+			</a>
+			
+			<a href="?page=2" class="search-nav__button">Следующая</a>
+		</div>
+	</div>
+	
+	<div class="text-block-margin"></div>
+</div>
+
+<div class="sidebar sidebar--about" data-sidebar>
+	@@include('../components/sidebar-order.html')
+</div>
+
+@@include('../components/fixed-inner-panel.html')
+
+@@include('../components/footer.html')

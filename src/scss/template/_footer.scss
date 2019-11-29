@@ -1,0 +1,162 @@
+@import "../mixins";
+
+.footer {
+  background: #414141;
+  color: #D8D8D8;
+  padding: 25px 0;
+  position: relative;
+  z-index: 11;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -45px;
+
+    @include mq(959px) {
+      margin-bottom: 25px;
+    }
+
+    @include mq(719px) {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    width: 330px;
+    height: 53px;
+    transform: translateY(20px);
+
+    @include mq(719px) {
+      width: 100%;
+      transform: none;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-menu {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
+    @include mq(719px) {
+      margin-top: 40px;
+      text-align: left;
+    }
+
+    &__item {
+      transition: .3s;
+
+      &:hover {
+        color: $footerHover;
+      }
+
+      & + & {
+        margin-top: 10px;
+      }
+
+      &--email {
+        margin-top: 25px !important;
+
+        @include mq(719px) {
+          margin-top: 35px !important;
+        }
+      }
+    }
+  }
+
+  &-contacts {
+    display: flex;
+
+    @include mq(719px) {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-right: 20px;
+      }
+
+      p {
+        line-height: 24px;
+      }
+
+      & + & {
+        margin-left: 50px;
+
+        @include mq(719px) {
+          margin-left: 30px;
+        }
+      }
+
+      a {
+        transition: .3s;
+
+        &:hover {
+          color: $footerHover;
+        }
+      }
+
+      @include mq(959px) {
+        @include mq(720px, min) {
+          &:nth-child(2),
+          &:nth-child(3) {
+            text-align: right;
+          }
+        }
+      }
+
+      @include mq(719px) {
+        &:first-child {
+          width: 100%;
+          margin-bottom: 35px;
+
+          svg {
+            display: none;
+          }
+        }
+
+        &:nth-child(2) {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    padding-top: 20px;
+    border-top: 1px solid #707070;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__copyright {
+    color: #ABABAB;
+  }
+
+  &-socials {
+    display: flex;
+
+    &__item {
+      path, circle {
+        transition: .3s;
+      }
+
+      &:hover {
+        path, circle {
+          fill: $footerHover;
+        }
+      }
+      & + & {
+        margin-left: 15px;
+      }
+    }
+  }
+}

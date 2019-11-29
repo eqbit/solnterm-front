@@ -1,0 +1,54 @@
+<div class="sidebar-calc">
+	<div class="sidebar-calc__title">Конвертер твёрдости</div>
+	
+	<form class="sidebar-calc__form" data-calc-form>
+		<div class="sidebar-calc__inputs">
+			<input type="text"
+			       name="in_val"
+			       class="sidebar-calc__input"
+			       required
+			       onfocus="this.placeholder=''"
+			       onblur="this.placeholder='Значение'"
+			       placeholder="Значение">
+			
+			<div class="input-container sidebar-calc__select-container">
+				<label for="@@id"
+				       class="sidebar-calc__select-label">Шкала</label>
+				<select name="scale"
+				        id="@@id"
+				        class="sidebar-calc__select"
+				        data-select-2>
+					<option value="HRA">HRA</option>
+					<option value="HRC">HRC</option>
+					<option value="HV">HV</option>
+					<option value="HB">HB</option>
+				</select>
+			</div>
+			
+		</div>
+		
+		<button type="submit" class="btn btn--primary sidebar-calc__btn">Перевести</button>
+	</form>
+	
+	<div class="sidebar-calc-value">
+		<div class="sidebar-calc-value-item">
+			<div class="sidebar-calc-value-item__title">HRA</div>
+			<div class="sidebar-calc-value-item__data" data-value="HRA">0000</div>
+		</div>
+		
+		<div class="sidebar-calc-value-item">
+			<div class="sidebar-calc-value-item__title">HRC</div>
+			<div class="sidebar-calc-value-item__data" data-value="HRC">0000</div>
+		</div>
+		
+		<div class="sidebar-calc-value-item">
+			<div class="sidebar-calc-value-item__title">HV</div>
+			<div class="sidebar-calc-value-item__data" data-value="HV">0000</div>
+		</div>
+		
+		<div class="sidebar-calc-value-item">
+			<div class="sidebar-calc-value-item__title">HB</div>
+			<div class="sidebar-calc-value-item__data" data-value="HB">0000</div>
+		</div>
+	</div>
+</div>

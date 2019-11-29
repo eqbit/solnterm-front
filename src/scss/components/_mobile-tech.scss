@@ -1,0 +1,59 @@
+@import "../mixins";
+
+.mobile-tech {
+  @include mq(1200px, min) {
+    display: none;
+  }
+
+  &__title {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #CCC;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+  }
+
+  &-item {
+    padding: 20px;
+    margin: 5px;
+    width: calc(25% - 10px);
+
+    @include mq(959px) {
+      width: calc(50% - 10px);
+    }
+
+    @include mq(719px) {
+      width: 100%;
+    }
+
+    &__title {
+      transition: .3s;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    &__links {
+      padding: 10px;
+      margin-top: 5px;
+      font-size: 12px;
+    }
+
+    &__link {
+      transition: .3s;
+      display: block;
+
+      & + & {
+        margin-top: .7rem;
+      }
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}

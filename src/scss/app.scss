@@ -1,0 +1,41 @@
+@import "./mixins";
+@import "./colors";
+@import "./base";
+@import "./ui";
+
+@import "./slick";
+
+@import "./template/header";
+@import "./template/footer";
+
+
+@import "./components/front-slider";
+@import "./components/our-tech";
+@import "./components/front-banner";
+@import "./components/our-eq";
+@import "./components/front-about";
+@import "./components/sidebar";
+@import "./components/fixed-front-panel";
+@import "./components/order-form";
+
+@import "./components/inner-top-block";
+
+@import "./components/about";
+
+@import "./components/legal";
+
+@import "./components/reviews";
+
+@import "./components/vacancy";
+
+
+@import "./components/search";
+
+@import "./components/tech";
+
+@import "./components/eq";
+
+
+@import "./components/mobile-tech";
+@import "./components/mobile-about";
+@import "./components/mobile-eq";

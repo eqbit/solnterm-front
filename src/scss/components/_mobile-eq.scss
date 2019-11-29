@@ -1,0 +1,41 @@
+@import "../mixins";
+
+.mobile-eq {
+  @include mq(1200px, min) {
+    display: none;
+  }
+
+  &__title {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #CCC;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px -20px;
+
+    @include mq(719px) {
+      margin: 10px 0;
+    }
+  }
+
+  &-item {
+    margin: 10px 20px;
+    width: calc(25% - 40px);
+    transition: .3s;
+
+    &:hover {
+      color: $primary;
+    }
+
+    @include mq(959px) {
+      width: calc(50% - 20px);
+      margin: 10px;
+    }
+
+    @include mq(719px) {
+      width: 100%;
+    }
+  }
+}
