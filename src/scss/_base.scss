@@ -24,8 +24,26 @@ body {
   flex-direction: column;
   padding-top: 94px;
 
+  @include mq(1199px) {
+    &:not(.front-panel-hidden) {
+      padding-bottom: 44px;
+      height: auto;
+      min-height: 100%;
+    }
+
+    &.front-panel-hidden {
+      padding-bottom: 0!important;
+    }
+  }
+
   @include mq (719px) {
     padding-top: 73px;
+
+    &:not(.front-panel-hidden) {
+      padding-bottom: 146px;
+      height: auto;
+      min-height: 100%;
+    }
   }
 }
 

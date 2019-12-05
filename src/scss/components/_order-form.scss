@@ -12,6 +12,7 @@
 
   @include mq(959px) {
     padding: 50px 45px;
+    width: 100%;
   }
 
   @include mq(719px) {
@@ -332,11 +333,11 @@
         line {
           transition: .3s;
         }
+      }
 
-        &:hover {
-          line {
-            stroke: #C80000;
-          }
+      &:hover {
+        line {
+          stroke: #C80000;
         }
       }
     }

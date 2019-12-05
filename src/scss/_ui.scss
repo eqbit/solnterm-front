@@ -112,6 +112,10 @@
     @include mq(1200px, min) {
       display: none !important;
     }
+
+    @include mq(767px) {
+      padding-top: 60px;
+    }
   }
   
   &__overlay {

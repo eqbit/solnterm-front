@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .front-slider {
   position: relative;
 
@@ -52,6 +54,8 @@
       object-fit: cover;
       right: 0;
       top: 0;
+      display: flex;
+      justify-content: flex-end;
 
       img {
         height: 100%;
@@ -108,6 +112,10 @@
 
     &__row {
       display: flex;
+
+      @include mq(719px) {
+        justify-content: center;
+      }
     }
   }
 

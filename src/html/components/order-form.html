@@ -145,9 +145,7 @@
 			<div class="order-form-success__subtitle">Ваш заказ принят на рассмотрение!</div>
 			
 			<div class="order-form-success__img">
-				<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M80 0C58.7881 0.0177427 38.4501 8.45199 23.451 23.4511C8.45198 38.4501 0.0177427 58.7881 0 80C0.0177427 101.212 8.45198 121.55 23.451 136.549C38.4501 151.548 58.7881 159.982 80 160C101.212 159.982 121.55 151.548 136.549 136.549C151.548 121.55 159.982 101.212 160 80C159.982 58.7881 151.548 38.4501 136.549 23.4511C121.55 8.45199 101.212 0.0177427 80 0V0ZM72 118L38 83L52 69L72 89L114 46L128 60L72 118Z" fill="#FFB941"/>
-				</svg>
+				<img src="/images/order-success.png" srcset="/images/order-success.png 1x, /images/order-success@2x.png 2x" alt="">
 			</div>
 			
 			<div class="order-form-success__promise">
@@ -157,6 +155,26 @@
 			
 			<div class="order-form-success__btn">
 				<div class="btn btn--primary" data-popup-close>Готово</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="order-form__step" data-order-form-step="3" style="display: none;">
+		<div class="order-form-success">
+			<div class="order-form-success__title">Размещение заказа</div>
+			<div class="order-form-success__subtitle">Произошла ошибка!</div>
+			
+			<div class="order-form-success__img">
+				<img src="/images/order-error.png" srcset="/images/order-error.png 1x, /images/order-error@2x.png 2x" alt="">
+			</div>
+			
+			<div class="order-form-success__promise">
+				Что-то пошло не так и ваша заявка не была принята на рассмотрение, <br>
+				повторите попытку.
+			</div>
+			
+			<div class="order-form-success__btn">
+				<div class="btn btn--primary" data-popup-start-again>Повторить</div>
 			</div>
 		</div>
 	</div>

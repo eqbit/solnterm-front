@@ -6,7 +6,8 @@ $(function () {
     $fileInput = $form.find('[data-file-input]'),
     $fileRow = $form.find('[data-file-doc-row]'),
     $fileRowParent = $fileRow.closest('[data-file-doc-row-parent'),
-    filesArray = [];
+    filesArray = [],
+    $startAgain = $('[data-popup-start-again]');
   
   $form.on('change', function (e) {
     state[e.target.name] = e.target.value;
@@ -39,13 +40,21 @@ $(function () {
   });
   
   $fileInput.on('change', function(e) {
-    filesArray = [];
-    
     let fileList = e.originalEvent.target.files;
   
     if(fileList.length) {
       [...fileList].forEach(file => {
-        filesArray.push(file);
+        let duplicate = false;
+        
+        filesArray.forEach(item => {
+          if(item.name === file.name) {
+            duplicate = true;
+          }
+        });
+        
+        if(!duplicate) {
+          filesArray.push(file);
+        }
       });
     }
   
@@ -115,12 +124,19 @@ $(function () {
       processData: false,
       contentType: false,
       dataType: "json",
-      success: response => {},
-      error: error => {},
-      complete: response => {
+      success: response => {
         $('[data-order-form-step]').hide();
         $('[data-order-form-step=2]').fadeIn();
+      },
+      error: error => {
+        $('[data-order-form-step]').hide();
+        $('[data-order-form-step=3]').fadeIn();
       }
     });
   });
+  
+  $startAgain.on('click', function() {
+    $('[data-order-form-step]').hide();
+    $('[data-order-form-step=0]').fadeIn();
+  })
 });
