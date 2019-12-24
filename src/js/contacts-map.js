@@ -72,6 +72,7 @@ if (document.querySelector('#contacts-map')) {
       }, {
         searchControlProvider: 'yandex#search'
       });
+      actualMap.behaviors.disable('scrollZoom');
   }
   
 }
