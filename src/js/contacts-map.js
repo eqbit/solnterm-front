@@ -1,6 +1,6 @@
 if (document.querySelector('#contacts-map')) {
   
-  let mapCenter = [57.120006, 65.626630];
+  let mapCenter = [56.195288, 36.989184];
   
   function loadScript(url, callback) {
     
@@ -67,7 +67,7 @@ if (document.querySelector('#contacts-map')) {
   function init() {
     let actualMap = new ymaps.Map("contacts-map", {
         center: mapCenter,
-        zoom: 17,
+        zoom: 13,
         
       }, {
         searchControlProvider: 'yandex#search'

@@ -9,5 +9,10 @@ $(function () {
     });
     
     $content.hide();
+    $head.each(function(index){
+      if($(this).hasClass('active')) {
+        $head.next().slideToggle();
+      }
+    });
   }
 });
