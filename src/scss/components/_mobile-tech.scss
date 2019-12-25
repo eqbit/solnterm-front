@@ -54,6 +54,9 @@
       &:hover {
         color: $primary;
       }
+      &.selected {
+        color: $primary;
+      }
     }
   }
 }
