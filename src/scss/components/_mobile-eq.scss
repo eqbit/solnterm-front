@@ -28,6 +28,9 @@
     &:hover {
       color: $primary;
     }
+    &.selected {
+      color: $primary;
+    }
 
     @include mq(959px) {
       width: calc(50% - 20px);

@@ -328,6 +328,9 @@
       &:not(.current):hover {
         color: $primary;
       }
+      &.selected {
+        color: $primary;
+      }
     }
 
     &__bottom-link {
