@@ -105,7 +105,8 @@ $(function () {
   
   $form.on('submit', function (e) {
     e.preventDefault();
-    
+
+    let that = $(this);
     let formData = new FormData();
 
     for(let i = 0; i < filesArray.length; i++) {
@@ -118,7 +119,7 @@ $(function () {
     }
   
     $.ajax({
-      url: '/ajax-url',
+      url: that.attr('data-url'),
       data: formData,
       type: 'POST',
       processData: false,
